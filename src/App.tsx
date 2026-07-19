@@ -35,8 +35,10 @@ function App() {
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
-    if (query.trim()) {
-      window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query.trim())}`;
+    const q = query.trim();
+    if (q) {
+      const isUrl = /^https?:\/\//.test(q) || (/^[\w-]+(\.[\w-]+)+/.test(q) && !q.includes(" "));
+      window.location.href = isUrl ? (q.startsWith("http") ? q : `https://${q}`) : `https://www.google.com/search?q=${encodeURIComponent(q)}`;
     } else {
       setQuery("");
       setSearchOpen(false);
