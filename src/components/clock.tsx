@@ -22,13 +22,11 @@ function Clock() {
         ({ "--value": value, "--digits": 2 } as React.CSSProperties);
 
     return (
-        <div className="clock-container">
-            <div className="date">
-                <span className="date text-2xl">{date}</span>
-            </div>
-            <div className="time-display">
+        <div className="flex flex-col items-center">
+            <div className="text-2xl text-white">{date}</div>
+            <div className="flex items-center gap-px">
 
-                <span className="countdown font-mono text-14xl">
+                <span className="countdown font-mono text-14xl text-white">
                     <span
                         style={countdownStyle(time.getHours())}
                         aria-live="polite"
@@ -38,9 +36,9 @@ function Clock() {
                     </span>
                 </span>
 
-                <span className="time-separator">:</span>
+                <span className="text-14xl text-white font-bold animate-blink">:</span>
 
-                <span className="countdown font-mono text-14xl">
+                <span className="countdown font-mono text-14xl text-white">
                     <span
                         style={countdownStyle(time.getMinutes())}
                         aria-live="polite"
@@ -50,9 +48,9 @@ function Clock() {
                     </span>
                 </span>
 
-                <span className="time-separator">:</span>
+                <span className="text-14xl text-white font-bold animate-blink">:</span>
 
-                <span className="countdown font-mono text-14xl">
+                <span className="countdown font-mono text-14xl text-white">
                     <span
                         style={countdownStyle(time.getSeconds())}
                         aria-live="polite"
