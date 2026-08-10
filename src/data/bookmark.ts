@@ -45,7 +45,7 @@ export const bookmarks: Bookmark[] = [
     {
         id: "vercel",
         title: "Vercel",
-        url: "https://web.whatsapp.com",
+        url: "https://vercel.com",
         keywords: ["vercel", "deploy"],
     },
     {
@@ -102,21 +102,27 @@ export const bookmarks: Bookmark[] = [
         url: "https://sumopod.com",
         keywords: ["sumo", "sumopod", "ai tokens", "ai token"],
     },
-        {
+    {
         id: "gmail",
         title: "Google Mail",
         url: "https://mail.google.com",
         keywords: ["gmail", "mail", "email", "google gmail"],
     },
-        {
+    {
         id: "photos",
         title: "Google Photos",
         url: "https://photos.google.com",
         keywords: ["photo", "photos", "foto", "google foto"],
     },
-        {
+    {
         id: "message",
-        title: "Google Message",
+        title: "Google Messages",
+        url: "https://messages.google.com",
+        keywords: ["gmess", "message", "rcs"],
+    },
+    {
+        id: "message",
+        title: "Google Messages",
         url: "https://messages.google.com",
         keywords: ["gmess", "message", "rcs"],
     },
