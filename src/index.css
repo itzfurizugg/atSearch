@@ -39,9 +39,13 @@
   @keyframes fade-out {
     from {
       opacity: 1;
+      transform: scale(1.1) translateY(0);
+      filter: blur(0);
     }
     to {
       opacity: 0;
+      transform: scale(5) translateY(0);
+      filter: blur(90px);
     }
   }
 
@@ -70,7 +74,7 @@
   @keyframes launchpad {
     from {
       opacity: 0;
-      transform: scale(0.7) translateY(30px);
+      transform: scale(1.6) translateY(0);
       filter: blur(90px);
     }
     to {
