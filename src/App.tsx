@@ -1,5 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import Clock from "./components/clock";
+// import Dock from "./components/dock";
+import { findBookmark } from "./data/bookmark";
 
 function App() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -37,6 +39,11 @@ function App() {
     e.preventDefault();
     const q = query.trim();
     if (q) {
+      const bookmark = findBookmark(q);
+      if (bookmark) {
+        window.location.href = bookmark.url;
+        return;
+      }
       const isUrl = /^https?:\/\//.test(q) || (/^[\w-]+(\.[\w-]+)+/.test(q) && !q.includes(" "));
       window.location.href = isUrl ? (q.startsWith("http") ? q : `https://${q}`) : `https://www.google.com/search?q=${encodeURIComponent(q)}`;
     } else {
