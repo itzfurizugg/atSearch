@@ -42,6 +42,24 @@ export const bookmarks: Bookmark[] = [
         url: "https://web.whatsapp.com",
         keywords: ["wa", "waweb", "whatsapp"],
     },
+        {
+        id: "vercel",
+        title: "Vercel",
+        url: "https://web.whatsapp.com",
+        keywords: ["vercel", "deploy"],
+    },
+        {
+        id: "supabase",
+        title: "Supabase",
+        url: "https://web.whatsapp.com",
+        keywords: ["supabase", "sbase"],
+    },
+        {
+        id: "figma",
+        title: "Figma",
+        url: "https://figma.com",
+        keywords: ["figma", "design"],
+    },
 ];
 
 export function findBookmark(query: string): Bookmark | undefined {
