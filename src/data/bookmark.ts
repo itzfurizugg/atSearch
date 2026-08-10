@@ -126,6 +126,12 @@ export const bookmarks: Bookmark[] = [
         url: "https://messages.google.com",
         keywords: ["gmess", "message", "rcs"],
     },
+    {
+        id: "fb-market",
+        title: "Marketplace by Facebook",
+        url: "https://www.facebook.com/marketplace/",
+        keywords: ["market", "marketplace", "mp"],
+    },
 ];
 
 export function findBookmark(query: string): Bookmark | undefined {
