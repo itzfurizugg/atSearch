@@ -51,7 +51,7 @@ export const bookmarks: Bookmark[] = [
     {
         id: "supabase",
         title: "Supabase",
-        url: "https://web.whatsapp.com",
+        url: "https://supabase.com/dashboard/organizations",
         keywords: ["supabase", "supa", "sbase"],
     },
     {
